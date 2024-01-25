@@ -1,4 +1,4 @@
-package com.alibou.websocket.user;
+package fr.ishtamar.chat.model;
 
 import lombok.Getter;
 import lombok.Setter;

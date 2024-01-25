@@ -1,5 +1,7 @@
-package com.alibou.websocket.user;
+package fr.ishtamar.chat.repository;
 
+import fr.ishtamar.chat.model.Status;
+import fr.ishtamar.chat.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

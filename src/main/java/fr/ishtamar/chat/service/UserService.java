@@ -1,6 +1,9 @@
-package com.alibou.websocket.user;
+package fr.ishtamar.chat.service;
 
 
+import fr.ishtamar.chat.model.Status;
+import fr.ishtamar.chat.model.User;
+import fr.ishtamar.chat.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

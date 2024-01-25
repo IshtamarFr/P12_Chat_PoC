@@ -1,5 +1,7 @@
-package com.alibou.websocket.user;
+package fr.ishtamar.chat.controller;
 
+import fr.ishtamar.chat.model.User;
+import fr.ishtamar.chat.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;

@@ -1,4 +1,4 @@
-package com.alibou.websocket;
+package fr.ishtamar.chat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
