@@ -1,0 +1,48 @@
+CREATE TABLE Client(
+   id INT,
+   nom VARCHAR(128) NOT NULL,
+   adresse VARCHAR(128) NOT NULL,
+   PRIMARY KEY(id)
+);
+
+CREATE TABLE Agence(
+   id INT,
+   adresse VARCHAR(128) NOT NULL,
+   PRIMARY KEY(id)
+);
+
+CREATE TABLE Véhicule(
+   immatriculation VARCHAR(16),
+   categorie VARCHAR(64) NOT NULL,
+   PRIMARY KEY(immatriculation)
+);
+
+CREATE TABLE Location(
+   id INT,
+   ville_depart VARCHAR(64) NOT NULL,
+   ville_retour VARCHAR(64),
+   date_heure_retour DATETIME,
+   date_heure_depart DATETIME,
+   etat VARCHAR(32) NOT NULL,
+   tarif DECIMAL(6,2),
+   date_heure_validation DATETIME,
+   immatriculation VARCHAR(16) NOT NULL,
+   id_1 INT,
+   id_2 INT NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(immatriculation) REFERENCES Véhicule(immatriculation),
+   FOREIGN KEY(id_1) REFERENCES Client(id),
+   FOREIGN KEY(id_2) REFERENCES Agence(id)
+);
+
+CREATE TABLE Paiement(
+   id INT,
+   reference VARCHAR(64),
+   montant DECIMAL(6,2) NOT NULL,
+   categorie VARCHAR(64) NOT NULL,
+   id_1 INT NOT NULL,
+   id_2 INT NOT NULL,
+   PRIMARY KEY(id),
+   FOREIGN KEY(id_1) REFERENCES Client(id),
+   FOREIGN KEY(id_2) REFERENCES Location(id)
+);
